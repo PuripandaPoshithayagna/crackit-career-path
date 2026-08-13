@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiMockInterviewRouteImport } from './routes/ai-mock-interview'
+import { Route as AnalysisRouteImport } from './routes/analysis'
+import { Route as AptitudeRouteImport } from './routes/aptitude'
+import { Route as CodingRouteImport } from './routes/coding'
+import { Route as MockExamsRouteImport } from './routes/mock-exams'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ResumeBuilderRouteImport } from './routes/resume-builder'
+import { Route as SettingsRouteImport } from './routes/settings'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiMockInterviewRoute = AiMockInterviewRouteImport.update({
+  id: '/ai-mock-interview',
+  path: '/ai-mock-interview',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnalysisRoute = AnalysisRouteImport.update({
+  id: '/analysis',
+  path: '/analysis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AptitudeRoute = AptitudeRouteImport.update({
+  id: '/aptitude',
+  path: '/aptitude',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CodingRoute = CodingRouteImport.update({
+  id: '/coding',
+  path: '/coding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MockExamsRoute = MockExamsRouteImport.update({
+  id: '/mock-exams',
+  path: '/mock-exams',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResumeBuilderRoute = ResumeBuilderRouteImport.update({
+  id: '/resume-builder',
+  path: '/resume-builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-mock-interview': typeof AiMockInterviewRoute
+  '/analysis': typeof AnalysisRoute
+  '/aptitude': typeof AptitudeRoute
+  '/coding': typeof CodingRoute
+  '/mock-exams': typeof MockExamsRoute
+  '/profile': typeof ProfileRoute
+  '/resume-builder': typeof ResumeBuilderRoute
+  '/settings': typeof SettingsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-mock-interview': typeof AiMockInterviewRoute
+  '/analysis': typeof AnalysisRoute
+  '/aptitude': typeof AptitudeRoute
+  '/coding': typeof CodingRoute
+  '/mock-exams': typeof MockExamsRoute
+  '/profile': typeof ProfileRoute
+  '/resume-builder': typeof ResumeBuilderRoute
+  '/settings': typeof SettingsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-mock-interview': typeof AiMockInterviewRoute
+  '/analysis': typeof AnalysisRoute
+  '/aptitude': typeof AptitudeRoute
+  '/coding': typeof CodingRoute
+  '/mock-exams': typeof MockExamsRoute
+  '/profile': typeof ProfileRoute
+  '/resume-builder': typeof ResumeBuilderRoute
+  '/settings': typeof SettingsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/ai-mock-interview'
+    | '/analysis'
+    | '/aptitude'
+    | '/coding'
+    | '/mock-exams'
+    | '/profile'
+    | '/resume-builder'
+    | '/settings'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/ai-mock-interview'
+    | '/analysis'
+    | '/aptitude'
+    | '/coding'
+    | '/mock-exams'
+    | '/profile'
+    | '/resume-builder'
+    | '/settings'
+  id:
+    | '__root__'
+    | '/'
+    | '/ai-mock-interview'
+    | '/analysis'
+    | '/aptitude'
+    | '/coding'
+    | '/mock-exams'
+    | '/profile'
+    | '/resume-builder'
+    | '/settings'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiMockInterviewRoute: typeof AiMockInterviewRoute
+  AnalysisRoute: typeof AnalysisRoute
+  AptitudeRoute: typeof AptitudeRoute
+  CodingRoute: typeof CodingRoute
+  MockExamsRoute: typeof MockExamsRoute
+  ProfileRoute: typeof ProfileRoute
+  ResumeBuilderRoute: typeof ResumeBuilderRoute
+  SettingsRoute: typeof SettingsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +156,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai-mock-interview': {
+      id: '/ai-mock-interview'
+      path: '/ai-mock-interview'
+      fullPath: '/ai-mock-interview'
+      preLoaderRoute: typeof AiMockInterviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/analysis': {
+      id: '/analysis'
+      path: '/analysis'
+      fullPath: '/analysis'
+      preLoaderRoute: typeof AnalysisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aptitude': {
+      id: '/aptitude'
+      path: '/aptitude'
+      fullPath: '/aptitude'
+      preLoaderRoute: typeof AptitudeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coding': {
+      id: '/coding'
+      path: '/coding'
+      fullPath: '/coding'
+      preLoaderRoute: typeof CodingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mock-exams': {
+      id: '/mock-exams'
+      path: '/mock-exams'
+      fullPath: '/mock-exams'
+      preLoaderRoute: typeof MockExamsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resume-builder': {
+      id: '/resume-builder'
+      path: '/resume-builder'
+      fullPath: '/resume-builder'
+      preLoaderRoute: typeof ResumeBuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiMockInterviewRoute: AiMockInterviewRoute,
+  AnalysisRoute: AnalysisRoute,
+  AptitudeRoute: AptitudeRoute,
+  CodingRoute: CodingRoute,
+  MockExamsRoute: MockExamsRoute,
+  ProfileRoute: ProfileRoute,
+  ResumeBuilderRoute: ResumeBuilderRoute,
+  SettingsRoute: SettingsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
