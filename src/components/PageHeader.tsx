@@ -34,7 +34,7 @@ export function EmptyState({
       <span className="grid size-14 place-items-center rounded-2xl bg-muted text-2xl">{icon}</span>
       <h2 className="mt-5 text-lg font-semibold">{title}</h2>
       <p className="mt-2 max-w-md text-sm text-muted-foreground">{description}</p>
-      <button className="mt-6 rounded-xl gradient-hero px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]">
+      <button className="mt-6 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90">
         {action}
       </button>
     </div>
