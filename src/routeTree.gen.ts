@@ -14,7 +14,6 @@ import { Route as AiMockInterviewRouteImport } from './routes/ai-mock-interview'
 import { Route as AnalysisRouteImport } from './routes/analysis'
 import { Route as AptitudeRouteImport } from './routes/aptitude'
 import { Route as CodingRouteImport } from './routes/coding'
-import { Route as MockExamsRouteImport } from './routes/mock-exams'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as ResumeBuilderRouteImport } from './routes/resume-builder'
 import { Route as SettingsRouteImport } from './routes/settings'
@@ -44,11 +43,6 @@ const CodingRoute = CodingRouteImport.update({
   path: '/coding',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MockExamsRoute = MockExamsRouteImport.update({
-  id: '/mock-exams',
-  path: '/mock-exams',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ProfileRoute = ProfileRouteImport.update({
   id: '/profile',
   path: '/profile',
@@ -71,7 +65,6 @@ export interface FileRoutesByFullPath {
   '/analysis': typeof AnalysisRoute
   '/aptitude': typeof AptitudeRoute
   '/coding': typeof CodingRoute
-  '/mock-exams': typeof MockExamsRoute
   '/profile': typeof ProfileRoute
   '/resume-builder': typeof ResumeBuilderRoute
   '/settings': typeof SettingsRoute
@@ -82,7 +75,6 @@ export interface FileRoutesByTo {
   '/analysis': typeof AnalysisRoute
   '/aptitude': typeof AptitudeRoute
   '/coding': typeof CodingRoute
-  '/mock-exams': typeof MockExamsRoute
   '/profile': typeof ProfileRoute
   '/resume-builder': typeof ResumeBuilderRoute
   '/settings': typeof SettingsRoute
@@ -94,7 +86,6 @@ export interface FileRoutesById {
   '/analysis': typeof AnalysisRoute
   '/aptitude': typeof AptitudeRoute
   '/coding': typeof CodingRoute
-  '/mock-exams': typeof MockExamsRoute
   '/profile': typeof ProfileRoute
   '/resume-builder': typeof ResumeBuilderRoute
   '/settings': typeof SettingsRoute
@@ -107,7 +98,6 @@ export interface FileRouteTypes {
     | '/analysis'
     | '/aptitude'
     | '/coding'
-    | '/mock-exams'
     | '/profile'
     | '/resume-builder'
     | '/settings'
@@ -118,7 +108,6 @@ export interface FileRouteTypes {
     | '/analysis'
     | '/aptitude'
     | '/coding'
-    | '/mock-exams'
     | '/profile'
     | '/resume-builder'
     | '/settings'
@@ -129,7 +118,6 @@ export interface FileRouteTypes {
     | '/analysis'
     | '/aptitude'
     | '/coding'
-    | '/mock-exams'
     | '/profile'
     | '/resume-builder'
     | '/settings'
@@ -141,7 +129,6 @@ export interface RootRouteChildren {
   AnalysisRoute: typeof AnalysisRoute
   AptitudeRoute: typeof AptitudeRoute
   CodingRoute: typeof CodingRoute
-  MockExamsRoute: typeof MockExamsRoute
   ProfileRoute: typeof ProfileRoute
   ResumeBuilderRoute: typeof ResumeBuilderRoute
   SettingsRoute: typeof SettingsRoute
@@ -184,13 +171,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CodingRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/mock-exams': {
-      id: '/mock-exams'
-      path: '/mock-exams'
-      fullPath: '/mock-exams'
-      preLoaderRoute: typeof MockExamsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/profile': {
       id: '/profile'
       path: '/profile'
@@ -221,7 +201,6 @@ const rootRouteChildren: RootRouteChildren = {
   AnalysisRoute: AnalysisRoute,
   AptitudeRoute: AptitudeRoute,
   CodingRoute: CodingRoute,
-  MockExamsRoute: MockExamsRoute,
   ProfileRoute: ProfileRoute,
   ResumeBuilderRoute: ResumeBuilderRoute,
   SettingsRoute: SettingsRoute,

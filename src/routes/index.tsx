@@ -127,7 +127,7 @@ function Dashboard() {
               </p>
               <Link
                 to={card.to}
-                className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-secondary"
+                className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 {card.cta} <ArrowRight className="size-4" />
               </Link>
@@ -174,7 +174,7 @@ function Dashboard() {
               <h3 className="mt-4 text-sm font-semibold">{action.title}</h3>
               <Link
                 to={action.to}
-                className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-secondary"
+                className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
               >
                 {action.cta} <ArrowRight className="size-3.5" />
               </Link>

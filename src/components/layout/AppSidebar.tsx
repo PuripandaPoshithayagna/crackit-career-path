@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import {
   BarChart3,
-  Brain,
   Calculator,
   Code2,
   FileText,
@@ -18,7 +17,6 @@ const items = [
   { title: "Aptitude", to: "/aptitude", icon: Calculator },
   { title: "AI Mock Interview", to: "/ai-mock-interview", icon: Mic },
   { title: "Resume Builder", to: "/resume-builder", icon: FileText },
-  { title: "Mock Exams", to: "/mock-exams", icon: Brain },
   { title: "Analysis", to: "/analysis", icon: BarChart3 },
 ] as const;
 
