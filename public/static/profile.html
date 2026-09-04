@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Profile — CrackIT</title>
+<meta name="description" content="Manage your CrackIT profile, education details and target job role." />
+<meta property="og:title" content="Profile — CrackIT" />
+<meta property="og:description" content="Manage your CrackIT profile, education details and target job role." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+<script src="app.js"></script>
+</head>
+<body>
+<div class="layout">
+  <div class="backdrop"></div>
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark">🚀</span>
+      <span class="brand-name">CRACK<span>IT</span></span>
+    </div>
+    <nav class="nav">
+      <a href="index.html"><span class="ico">▦</span>Dashboard</a>
+      <a href="coding.html"><span class="ico">⌨</span>Coding</a>
+      <a href="aptitude.html"><span class="ico">🧮</span>Aptitude</a>
+      <a href="ai-mock-interview.html"><span class="ico">🎤</span>AI Mock Interview</a>
+      <a href="resume-builder.html"><span class="ico">📄</span>Resume Builder</a>
+      <a href="analysis.html"><span class="ico">📊</span>Analysis</a>
+    </nav>
+    <div class="sidebar-footer">
+      <!-- Login/logout hook: point this at your login page or auth script -->
+      <button class="logout" type="button"><span class="ico">⎋</span>Logout</button>
+    </div>
+  </aside>
+
+  <div class="content">
+    <header class="topbar">
+      <button class="menu-btn" type="button" aria-label="Open navigation">☰</button>
+      <form class="search"><span class="search-ico">🔍</span><input type="search" placeholder="Search problems, tests, topics..." /></form>
+      <div class="topbar-actions">
+        <button class="icon-btn" type="button" aria-label="Notifications" data-dropdown="notif-menu">🔔</button>
+        <div class="dropdown" id="notif-menu">
+          <div class="label"><p>Notifications</p></div>
+          <hr />
+          <div class="empty">No notifications yet.<br />Start practicing to get updates.</div>
+        </div>
+        <button class="profile-btn" type="button" data-dropdown="profile-menu">
+          <span class="avatar">P</span><span class="name">Poshitha</span><span>▾</span>
+        </button>
+        <div class="dropdown" id="profile-menu">
+          <div class="label"><p>Poshitha</p><p>Placement aspirant</p></div>
+          <hr />
+          <a href="profile.html">👤 Profile</a>
+          <a href="settings.html">⚙ Settings</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="page-title">Profile</h1>
+        <p class="page-subtitle">Your details are used to personalise practice and resumes.</p>
+        <div class="card" style="margin-top:24px;padding:32px">
+          <div class="profile-head">
+            <span class="avatar-lg">P</span>
+            <div><h2 style="font-size:18px;font-weight:600">Poshitha</h2><p style="font-size:14px;color:var(--muted-foreground)">Placement aspirant</p></div>
+          </div>
+          <div class="grid grid-2" style="margin-top:32px">
+            <div class="field"><p class="k">Target role</p><p class="v">Not set</p></div>
+            <div class="field"><p class="k">College</p><p class="v">Not set</p></div>
+            <div class="field"><p class="k">Graduation year</p><p class="v">Not set</p></div>
+            <div class="field"><p class="k">Skills</p><p class="v">Not added</p></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+</body>
+</html>
