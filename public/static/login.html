@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login — CrackIT</title>
+<meta name="description" content="Sign in to CrackIT to continue your placement preparation." />
+<meta property="og:title" content="Login — CrackIT" />
+<meta property="og:description" content="Sign in to CrackIT to continue your placement preparation." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+<script src="app.js"></script>
+</head>
+<body>
+  <!--
+    PLACEHOLDER LOGIN PAGE for the auth teammate.
+    Wire the form submit to your backend, then redirect to index.html on success.
+    The dashboard's Logout button lives in app.js (".logout" handler) — point it back here.
+  -->
+  <main style="display:grid;place-items:center;min-height:100vh;padding:24px">
+    <div class="card" style="width:100%;max-width:400px;padding:32px">
+      <div class="brand" style="padding:0 0 20px">
+        <span class="brand-mark">🚀</span>
+        <span class="brand-name">CRACK<span>IT</span></span>
+      </div>
+      <h1 style="font-size:22px;font-weight:600">Sign in</h1>
+      <p class="page-subtitle">Continue your placement preparation.</p>
+      <form style="margin-top:24px;display:grid;gap:14px" action="index.html">
+        <label style="display:grid;gap:6px">
+          <span style="font-size:13px;font-weight:500">Email</span>
+          <input type="email" name="email" required placeholder="you@college.edu"
+            style="height:40px;padding:0 12px;border-radius:12px;border:1px solid var(--border);background:var(--card-elevated);color:var(--foreground);font-size:14px" />
+        </label>
+        <label style="display:grid;gap:6px">
+          <span style="font-size:13px;font-weight:500">Password</span>
+          <input type="password" name="password" required placeholder="••••••••"
+            style="height:40px;padding:0 12px;border-radius:12px;border:1px solid var(--border);background:var(--card-elevated);color:var(--foreground);font-size:14px" />
+        </label>
+        <button class="btn btn-block" type="submit" style="margin-top:6px">Sign in</button>
+      </form>
+      <p class="note">Auth logic is not implemented here — connect your own backend.</p>
+    </div>
+  </main>
+</body>
+</html>
