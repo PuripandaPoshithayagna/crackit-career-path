@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Resume Builder — CrackIT</title>
+<meta name="description" content="Build a professional placement resume from your skills, education, projects and target role." />
+<meta property="og:title" content="Resume Builder — CrackIT" />
+<meta property="og:description" content="Build a professional placement resume from your skills, education, projects and target role." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+<script src="app.js"></script>
+</head>
+<body>
+<div class="layout">
+  <div class="backdrop"></div>
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark">🚀</span>
+      <span class="brand-name">CRACK<span>IT</span></span>
+    </div>
+    <nav class="nav">
+      <a href="index.html"><span class="ico">▦</span>Dashboard</a>
+      <a href="coding.html"><span class="ico">⌨</span>Coding</a>
+      <a href="aptitude.html"><span class="ico">🧮</span>Aptitude</a>
+      <a href="ai-mock-interview.html"><span class="ico">🎤</span>AI Mock Interview</a>
+      <a href="resume-builder.html" class="active"><span class="ico">📄</span>Resume Builder</a>
+      <a href="analysis.html"><span class="ico">📊</span>Analysis</a>
+    </nav>
+    <div class="sidebar-footer">
+      <!-- Login/logout hook: point this at your login page or auth script -->
+      <button class="logout" type="button"><span class="ico">⎋</span>Logout</button>
+    </div>
+  </aside>
+
+  <div class="content">
+    <header class="topbar">
+      <button class="menu-btn" type="button" aria-label="Open navigation">☰</button>
+      <form class="search"><span class="search-ico">🔍</span><input type="search" placeholder="Search problems, tests, topics..." /></form>
+      <div class="topbar-actions">
+        <button class="icon-btn" type="button" aria-label="Notifications" data-dropdown="notif-menu">🔔</button>
+        <div class="dropdown" id="notif-menu">
+          <div class="label"><p>Notifications</p></div>
+          <hr />
+          <div class="empty">No notifications yet.<br />Start practicing to get updates.</div>
+        </div>
+        <button class="profile-btn" type="button" data-dropdown="profile-menu">
+          <span class="avatar">P</span><span class="name">Poshitha</span><span>▾</span>
+        </button>
+        <div class="dropdown" id="profile-menu">
+          <div class="label"><p>Poshitha</p><p>Placement aspirant</p></div>
+          <hr />
+          <a href="profile.html">👤 Profile</a>
+          <a href="settings.html">⚙ Settings</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="page-title">Resume Builder</h1>
+        <p class="page-subtitle">Create a professional resume based on your skills, education, projects and target job role.</p>
+        <div style="margin-top:24px">
+          <div class="card empty-state">
+            <span class="tile">📄</span>
+            <h2>No resume created yet</h2>
+            <p>Start a new resume and optionally choose a target company so the content is customized for that company's requirements.</p>
+            <button class="btn" type="button">Create Resume →</button>
+          </div>
+          <p class="note">Target company selection is optional and is used only to customize your resume.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+</body>
+</html>
